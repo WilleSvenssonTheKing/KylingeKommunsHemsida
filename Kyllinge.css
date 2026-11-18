@@ -1,0 +1,246 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Encode Sans Semi Expanded', Arial, sans-serif;
+    background-color: #f8fdff;
+}
+
+
+
+
+
+#wrapper{
+    background-color: #f8fdff;
+}
+
+#navbar1{
+    background-color: #c1c9fa;
+    padding: 10px;
+    text-align: right;
+}
+
+#navbar1 li{
+    display: inline-block;
+    margin-right: 40px;
+}
+
+#navbar1 li a{
+    color: #22253e;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Encode Sans Semi Expanded', Arial, sans-serif;
+    font-weight: bold;
+}
+#navbar1 li a:hover{
+    transition: 0.1s;
+    color: #121f82;
+}
+
+#logga{
+    display: block;
+    margin: -8px 0 0 -40px;
+    float: left;
+}
+
+#navbar2{
+    background-color:#8c98f7;
+    padding: 10px;
+    text-align: left;
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+
+}
+
+#navbar2 li{
+    display: inline-block;
+    margin-left: 40px;
+}
+
+#navbar2 li a{
+    color: #22253e;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Encode Sans Semi Expanded', Arial, sans-serif;
+    font-weight: bold;
+}
+
+#navbar2 li a:hover{
+    border-bottom: 2px solid #22253e;
+}
+
+#sökfunktion{
+    float:right;
+    display:block;
+    margin: 0 0 0 0;
+
+}
+
+#sökfunktion input[type="text"]{
+    padding: 5px;
+    font-size: 17px;
+    border: none;
+    float: left;
+    width: 200px;
+    background: #c1c9fa;
+    border-left: 5px solid #22253e;
+}
+
+#bakgrundsbild{
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.255), rgba(0, 0, 0, 0.255)),
+        url("https://solvesborg.se/images/200.5c2390611969f5df4e533ca2/1747118787581/Kylinge1.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    width: 100%;
+}
+
+
+
+#bakgrundsbild h1{
+    color: #ffffff;
+    text-align: center;
+    font-size: 60px;
+    margin: 30px;
+    font-family: 'Encode Sans Semi Expanded', Arial, sans-serif;
+    margin-top: -10px;
+    padding-top: 150px;
+}
+
+#navbar3{
+    text-align:center;
+}
+
+#navbar3 li{
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: #c1c9fa;
+    padding: 5px 40px 5px 40px;
+    border-radius: 1000px;
+}
+
+#navbar3 li a{
+    color: #22253e;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Encode Sans Semi Expanded', Arial, sans-serif;
+    font-weight: bold;
+}
+
+#navbar3 li:hover{
+    transition: 0.1s;
+    background-color: #6a79eb;
+}
+
+
+#bildmeny{
+background-color: #c1c9fa;
+;
+    margin: 20px 0px 20px 0px;
+    padding: 20px;
+    text-align: center;
+}
+
+#bildmeny li{
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+    background-color: #818de1;
+}
+
+#bildmeny li a{
+    color: #22253e;
+    text-decoration: none;
+    font-size: 10px;
+    font-family: 'Encode Sans Semi Expanded', Arial, sans-serif;
+    font-weight: bold;
+}
+
+#bildmeny li a p{
+    float: right;
+    text-align: left;
+}
+
+#bildmeny span{
+  width:200px;
+  display:block;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+
+#sidebar{
+    background-color: green;
+    float: right;
+    text-align: center;
+
+}
+
+#sidebar span{
+    width:200px;
+    display:block;
+    word-wrap: break-word;
+}
+
+
+
+#main{
+    background-image: url("Robert.png");
+    background-size: cover;
+    background-position: center;
+    margin-bottom: -16px;
+    margin-top: -20px;
+    padding: 20px;
+}
+
+
+
+#footer{
+    background-color: #c1c9fa;
+    margin-top: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 15px;
+
+}
+
+
+#footer ol{
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+#footer li{
+    display: inline-block;
+    margin-right: 20px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+#footer li a{
+    color: #1a258a;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: 'Encode Sans Semi Expanded', Arial, sans-serif;
+    font-weight: bold;
+}
+
+
+#footer li span{
+    width:200px;
+    display:block;
+    word-wrap: break-word;
+}
+
+#footer li a:hover{
+    transition: 0.1s;
+    color: #6a79eb;
+    border-bottom: 2px solid #6a79eb;
+}
+
+

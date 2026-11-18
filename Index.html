@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kylinge City</title>
+       <link rel="stylesheet" href="Kyllinge.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    const knapp = document.getElementById("arabsikaKnapp");
+
+    if (!knapp) {
+        console.log("Hittar inte Arabsika-knappen!");
+        return;
+    }
+
+    let orten = false;
+
+    const oversattning = {
+        "Välkommen till Kylinge kommun": "WALLAH välkommen till Kylinge shuno",
+        "Bibliotek": "Bibblan bror",
+        "Evenemang": "Guzzar och grabbar events",
+        "Lediga jobb": "Jobb för grabbar med para",
+        "E-tjänster": "Digitala grejer shuno",
+        "Lyssna": "Lyssna bror",
+        "Arabsika": "Svenska",
+        "Stödhjälp": "Hjälp shuno",
+        "Kossor": "Kossorna bror",
+        "Skyltar": "Signs wallah",
+        "ÖPPETTIDER:": "NÄR VI HAR ÖPPET SHUNO:",
+        "Kontakta oss:": "Hör av dig bror:",
+        "Sossemedier:": "Våra socials wallah"
+    };
+
+    const originalText = [];
+
+    document.querySelectorAll("#wrapper *").forEach(element => {
+        if (element.children.length === 0) {
+            originalText.push({
+                element: element,
+                original: element.textContent
+            });
+        }
+    });
+
+    knapp.addEventListener("click", function(event) {
+        event.preventDefault();
+
+        orten = !orten;
+
+        originalText.forEach(item => {
+            item.element.textContent = orten
+                ? (oversattning[item.original] || item.original)
+                : item.original;
+        });
+
+    });
+const kinesiskaKnapp = document.getElementById("kinsesiskaKnapp");
+
+let kinesiska = false;
+
+const kinesiskaOriginal = [];
+
+document.querySelectorAll("#wrapper *").forEach(element => {
+    if (element.children.length === 0) {
+        kinesiskaOriginal.push({
+            element: element,
+            text: element.textContent
+        });
+    }
+});
+
+kinesiskaKnapp.addEventListener("click", function(event) {
+    event.preventDefault();
+
+    kinesiska = !kinesiska;
+
+    kinesiskaOriginal.forEach(item => {
+        item.element.textContent = kinesiska
+            ? item.text.replace(/l/gi, function(bokstav) {
+                return bokstav === "L" ? "R" : "r";
+            })
+            : item.text;
+    });
+});
+});
+</script>
+
+    
+
+
+
+
+<body>
+    <div id="wrapper">
+
+        <div id="navbar1">
+            <ul>
+                
+                <li><a href="#">Lyssna</a></li>
+                <li><a href="#" id="arabsikaKnapp">Arabsika</a></li>
+                <li><a href="#" id="kinsesiskaKnapp">Kinsesiska</a></li>
+                <li><a href="#">Stödhjälp</a></li>
+            </ul>
+        </div> <!-- Slut navbar1 -->
+        <div id="navbar2">
+            <ul>
+                <div id="logga">
+                <li><a href="#"><img src="KylingeK.png" alt="puss" width="40px" height="40px"></a></li>
+                </div>
+                <li><a href="#">Kylis-Kylinges egna AI-bot</a></li>
+                <li><a href="#">Prutt</a></li>
+                <li><a href="#">Kiss</a></li>
+                <li><a href="#">bajs</a></li>
+                 <div id="sökfunktion">
+            <input type="text" placeholder="Sök...">
+        </div>
+            </ul>
+
+
+        </div><!-- slut navbar2 -->
+
+        <div id="bakgrundsbild">
+            <h1>Välkommen till Kylinge kommun</h1>
+        </div>
+
+        <div id="navbar3">
+            
+            <ul>
+                <li><a href="#">Bibliotek</a></li>
+                <li><a href="#">Evenemang</a></li>
+                <li><a href="#">Lediga jobb</a></li>
+                <li><a href="#">E-tjänster</a></li>
+            </ul>
+
+        </div><!-- slut navbar3 -->
+      
+        <div id="bildmeny">
+            <ul>
+                <li><a href="#"><img src="kossan.jpeg" width="100px" height="150px" alt="Bild 1"><p><span><strong>Kossor</strong><br>I Kylinge finns det många kor, för säkerhets fall bör du undvika de så mycket som möjligt. Detta är inte ett skämt.</span></p></a></li>
+                <li><a href="#"><img src="Skola.jpeg" width="100px" height="150px" alt="Bild 3"><p><span><strong>Studiestart 2027:</strong><br>Wallah grabbar ni börjar skolan snart och sånt kyss mig bara nu.</span></p></a></li>
+                <li><a href="#"><img src="Kylinge.png" width="100px" height="150px" alt="Bild 3"><p><span><strong>Skyltar</strong><br>I Kylinge finns det många skyltar som berättar att du befinner dig i just Kylinge, annars är det lätt att gå vilse. En gång gick jag faktiskt vilse utanför mitt hus och jag blev jätterädd, lyckligtvis såg jag en Kylingeskylt så jag kunde känna mig i trygga händer.</span></p></a></li>            </ul>
+            
+            <!-- <img src="Kylinge.png" alt="Bild 2"> -->
+        </div> <!-- slutbildmendy -->
+
+        <div id="main">
+            <p>Kylinge är en kommun i Sverige som är känd för sin vackra natur, rika kultur och vänliga invånare. Kommunen erbjuder ett brett utbud av aktiviteter och evenemang för både invånare och besökare. Oavsett om du är intresserad av friluftsliv, konst, historia eller bara vill njuta av den lugna atmosfären, har Kylinge något att erbjuda för alla.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus voluptas magnam hic ab consequatur iure, consequuntur iste eum adipisci earum animi aspernatur? Quia impedit quasi excepturi illum corporis molestiae ratione mollitia necessitatibus reprehenderit similique voluptate maxime nostrum perspiciatis assumenda, maiores iusto porro laboriosam nihil cum hic voluptas? Quibusdam cupiditate distinctio saepe alias animi voluptate. Debitis perferendis sed blanditiis tempore voluptatibus consequatur cum officia, iste, facere ut, repellat at nam facilis? Accusantium rem accusamus velit minima suscipit! Doloremque quaerat dolore consectetur velit voluptates maxime! Dolor, assumenda veniam, nihil impedit doloribus quisquam enim minima modi perspiciatis accusamus quod sint nemo consequatur soluta repellat fugiat iste eveniet. Accusamus rerum sequi, saepe, labore quas dolor ad corporis suscipit corrupti minima quisquam vel, ipsum deleniti non illum ut iure facilis dignissimos nulla? Fugit temporibus recusandae soluta doloremque, voluptates inventore consequuntur tempore sunt odit. Architecto eligendi aperiam maxime cumque sapiente ullam cum eaque totam recusandae, repellat, in consectetur! Voluptatem tempore sunt deserunt mollitia officia ut a quia delectus minus repudiandae. Numquam error ea amet quam tenetur facere, distinctio voluptates odio architecto quia! Suscipit velit placeat quaerat. Et sequi provident odio ipsum modi molestias aspernatur voluptas similique earum nulla eos ex commodi, unde totam sunt consequuntur delectus itaque? Cumque, consequuntur sint magni ab harum saepe veritatis sequi dolorem sapiente incidunt numquam voluptates laboriosam. Sequi magnam sit cumque illo similique delectus laudantium maiores, corporis tempore quis dolores at, ipsa necessitatibus. Nobis quod assumenda officia, obcaecati ipsum ea! Sint atque harum odit quasi tenetur cum voluptatem eius blanditiis ut. A sunt facere voluptatum laudantium enim molestias sit obcaecati vel, eum ratione doloribus harum praesentium debitis asperiores quae labore deserunt pariatur quod tenetur officiis! Qui provident optio possimus, consequatur id labore amet ratione adipisci voluptas quaerat ab incidunt eius, omnis hic nostrum repellendus magnam excepturi doloremque nemo repellat praesentium. Veritatis eius hic tenetur a unde ad ipsa in? Ea odio excepturi consectetur commodi quos debitis culpa, animi repellat eos ratione vero adipisci nisi hic iusto molestias quae maiores. Mollitia id aliquid eligendi omnis aperiam quas nostrum neque quasi quibusdam, reprehenderit facere possimus necessitatibus libero iusto quisquam similique accusamus doloremque natus nam culpa? In labore, odio alias neque totam vel laboriosam dolore cumque cum. Repellat temporibus modi dolore, animi aut, libero, neque pariatur cum ex necessitatibus omnis eligendi placeat asperiores. Fuga cumque officiis similique exercitationem architecto, sequi non sunt doloremque quasi rem, blanditiis quos et sed accusamus eos quidem dicta corrupti recusandae! Fugit blanditiis architecto at, hic beatae eos vel quisquam fuga earum consequuntur sed reprehenderit repudiandae laboriosam, quod voluptatibus quasi deleniti! Cupiditate non deleniti suscipit vitae. Et illum tempora natus perferendis beatae deserunt odit odio, minus est atque soluta error accusamus sint non. Delectus adipisci similique ab animi nostrum eligendi praesentium corporis fugit deserunt, expedita nesciunt quos dolore libero nemo tempora odit. Ad reiciendis voluptatem voluptatibus nulla dolore pariatur aliquid adipisci cumque ipsum similique laboriosam labore consequuntur, earum quod qui impedit. Dolore, quidem! Excepturi id atque laborum aliquid laboriosam eligendi ut voluptatum consectetur, natus ex obcaecati asperiores sunt, debitis quidem.</p>
+
+
+        </div>
+
+
+
+
+        <div id="footer">
+            <ul>
+                <li><span><strong>ÖPPETTIDER:</strong>
+                <ol>
+                    <li>Vardagar: 12.03-12.05</li>
+                    <li>Lördagar: 14.06-17.02</li>
+                    <li>Söndagar: 17.21-19.58</li>
+                </ol>
+                </span></li>
+
+                <li><span><strong>Kontakta oss:</strong>
+                <ol>
+                    <li>Telefon: <a href="tel:112">67676767</a></li>
+                    <li>Mejl: <a href="mailto:Kylinge@kylinge.se">Kylinge@kylinge.se</a></li>
+                </ol>
+                </span></li>
+
+                <li><span><strong>Sossemedier:</strong>
+                <ol>
+                    <li><a href="https://www.facebook.com/KylingeKommun">Fejsbok</a></li>
+                    <li><a href="https://www.instagram.com/KylingeKommun">Instagram</a></li>
+                    <li><a href="https://prostatacancer.se/kunskapsbank/symptom/symptom/">Megapille</a></li>
+                </ol>
+                </span></li>
+
+               <!--  <li><span><strong>Kontakta oss:</strong><br><a href="tel:1">Fax: 67676767</a><br>Mejl: <a href="mailto:Kylinge@kylinge.se">Kylinge@kylinge.se</a><br>Håll käfteregjnmksdjhjkwghwefjwuon Miriam<br>Telefonknummer: 070-674 121</span></li>
+                <li><span><strong>Sossemedier:</strong><br><a href="https://www.facebook.com/KylingeKommun">Facebook</a><br><a href="https://www.instagram.com/KylingeKommun">Instagram</a><br>Håll käften Miriam<br>Twitter: @KylingeKommun</span></li> -->
+
+            </ul>
+            <br>
+          <p>&copy; 2026 Kylinge kommun. Alla rättigheter förbehållna.</p>
+        </div> <!-- slut footer -->
+
+    </div> <!-- Slut Wrapper -->
+    
+</body>
+</html>
